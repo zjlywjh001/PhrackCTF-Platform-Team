@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd 
+	http://www.springframework.org/schema/task 
+ 	http://www.springframework.org/schema/task/spring-task-4.2.xsd">
+ 	
+	
+	<context:annotation-config />
+<!-- 	<context:component-scan base-package="top.phrack.ctf.utils" /> -->
+	<context:component-scan base-package="top.phrack.ctf.controller" />
+	<task:annotation-driven />
+	
+	<!-- 邮件服务 -->
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<!-- 服务器 -->
+		<property name="host" value="changeit" />
+		<!-- 端口号 -->
+		<property name="port" value="changeit" />
+		<!-- 用户名 -->
+		<property name="username" value="changeit" />
+		<!-- 密码 -->
+		<property name="password" value="changeit" />
+		<!-- SMTP服务器验证 -->
+		<property name="javaMailProperties">
+			<props>
+				<!-- 验证身份 -->
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.timeout">25000</prop>
+				<prop key="mail.smtp.ssl.enable">true</prop>
+				<prop key="mail.debug">false</prop>
+			</props>
+		</property>
+	</bean>
+	
+</beans>

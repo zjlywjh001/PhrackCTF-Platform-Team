@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd 
+	http://www.springframework.org/schema/task 
+ 	http://www.springframework.org/schema/task/spring-task-4.2.xsd">
+ 	
+    <!-- 文件上传 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+		<property name="defaultEncoding" value="utf-8" />  
+		<property name="maxUploadSize" value="10485760000" />   <!-- 总共最多只能上传10G -->
+		<property name="maxInMemorySize" value="40960" />  
+	</bean>
+	
+	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+		<property name="exceptionMappings">  
+			<props>  
+				<!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到出问题页面 -->  
+				<prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">/showinfo?err=100</prop>  
+			</props>  
+		</property>  
+	</bean>
+    	
+</beans>
