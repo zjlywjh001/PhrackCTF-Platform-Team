@@ -324,7 +324,7 @@ public class ScoreBoardController {
 				continue;
 			}
 			ScoreTrend sbitem = new ScoreTrend();
-			sbitem.setusername(item.getName());
+			sbitem.setusername(StringEscapeUtils.unescapeHtml(item.getName()));
 			sbitem.setuserrank(count++);
 			
 			
