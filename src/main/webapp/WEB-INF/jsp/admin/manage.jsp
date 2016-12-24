@@ -502,19 +502,19 @@
                         	<fieldset>
 		                        <div class="form-group">
 		                    		<div class="col-lg-12">
-		                        		<legend>Max team members:</legend>
+		                        		<h3>Max team members:</h3>
 		                        		<input type="text" value="${ max_teammembers }" class="form-control" name="teammembers" style="width:30%">
 		                    		</div>
 		                		</div>
 		                        <div class="form-group">
 		                    		<div class="col-lg-12">
-		                        		<legend>Competition start time:</legend>
+		                        		<h3>Competition start time:</h3>
 		                        		<input type="text" value="<fmt:formatDate value="${ compstart }" pattern="yyyy-MM-dd HH:mm"/>" class="form-control form_datetime col-md-6" name="starttime" data-date-format="yyyy-mm-dd hh:ii" style="width:30%" placeholder="Leave it blank if do not want to set." > 
 		                    		</div>
 		                		</div>
 		                		<div class="form-group">
 		                    		<div class="col-lg-12">
-		                        		<legend>Competition end time:</legend>
+		                        		<h3>Competition end time:</h3>
 		                        		<input type="text" value="<fmt:formatDate value="${ compend }" pattern="yyyy-MM-dd HH:mm"/>" class="form-control form_datetime col-md-6" name="endtime" data-date-format="yyyy-mm-dd hh:ii" style="width:30%" placeholder="Leave it blank if do not want to set." >
 		                    		</div>
 		                		</div>

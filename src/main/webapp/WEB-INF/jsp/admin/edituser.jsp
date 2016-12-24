@@ -35,7 +35,7 @@
             <div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-                        <legend>Score: ${ userscore }, Rank: ${ userrank }</legend>
+                        <h3>Score: ${ userscore }, Rank: ${ userrank }</h3>
                         <c:forEach items="${ userstat }" var="ctp">
                         <strong>${ ctp.name }: ${ ctp.proc }/${ ctp.total }(<fmt:formatNumber type="number" value="${ ctp.percent }" maxFractionDigits="1"/>%)</strong>
                         <div class="progress">
@@ -45,7 +45,7 @@
                         </div>
                         </c:forEach>
                         <br/>
-                        <legend>Total: ${ userscore }/${ totalscore }(${ totalpercent }%)</legend>
+                        <h3>Total: ${ userscore }/${ totalscore }(${ totalpercent }%)</h3>
                         <div class="progress">
                             <c:forEach items="${ userstat }" var="ctp">
                             <div class="progress-bar progress-bar-${ctp.style} progress-bar-striped"  style="width: <fmt:formatNumber type="number" value="${ctp.percentall}" maxFractionDigits="3"/>%">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>        
-                    <legend>IP address usage&nbsp;|&nbsp;<a href="admin/userips/${ currentuser.id }">Show All</a></legend>
+                    <h3>IP address usage&nbsp;|&nbsp;<a href="admin/userips/${ currentuser.id }">Show All</a></h3>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="text-muted bootstrap-admin-box-title"><strong>IPs(Limited to 5 results)</strong></div>
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <legend>Submissions&nbsp;|&nbsp;<a href="admin/usersubmit/${ currentuser.id }">Show All</a></legend>
+                        <h3>Submissions&nbsp;|&nbsp;<a href="admin/usersubmit/${ currentuser.id }">Show All</a></h3>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="text-muted bootstrap-admin-box-title"><strong>Submissions(Limited to 5 results)</strong></div>
@@ -172,7 +172,7 @@
             <div class="span12">
                 <form:form class="form-horizontal" onsubmit="javascript:return false;">
                     <fieldset>
-                        <legend>Edit Profile</legend>
+                        <h3>Edit Profile</h3>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead">Email </label>
                             <div class="col-lg-10">
@@ -247,7 +247,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript:return false;">
                     <fieldset>
-                        <legend>Reset Password</legend>
+                        <h3>Reset Password</h3>
                         <button type="submit" class="btn btn-warning" onclick="resetpass(${ currentuser.id });">Reset Password</button>
                     </fieldset>
                 </form>
@@ -260,7 +260,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript:return false;">
                     <fieldset>
-                        <legend>Delete This User</legend>
+                        <h3>Delete This User</h3>
                         <button type="submit" class="btn btn-danger" onclick="deluser(${ currentuser.id });">Delete</button>
                     </fieldset>
                 </form>

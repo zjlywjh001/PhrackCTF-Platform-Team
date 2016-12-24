@@ -70,19 +70,19 @@
                     <fieldset>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Title</legend>
+                                <h3>Title</h3>
                                 <input type="text" class="form-control col-md-6" id="tasktitle" autocomplete="off" data-provide="typeahead" style="width:50%">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Score</legend>
+                                <h3>Score</h3>
                                 <input type="text" class="form-control col-md-6" id="taskscore" autocomplete="off" data-provide="typeahead" style="width:100px">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Category</legend>
+                                <h3>Category</h3>
                                 <select id="select01" name="cateselector" class="form-control" style="width: 300px">
                                 	<option disabled selected>-- Select A Category --</option>
                             		<c:forEach items="${allcates}" var="ct">
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
-                            <legend>Description</legend>
+                            <h3>Description</h3>
                             <script id="probcontent" name="content" type="text/plain" style="height:500px;">
                                 <p></p>
                             </script>
@@ -100,13 +100,13 @@
                         <br/>
                         <div class="form-group">
                         	<div class="col-lg-12" id="attachdiv">
-                            	<legend>Attachment</legend>
+                            	<h3>Attachment</h3>
                             	<input type="file" name="file_upload" id="file_upload">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>FLAG</legend>
+                                <h3>FLAG</h3>
                                 <input type="text" class="form-control col-md-6" id="flag"  autocomplete="off" data-provide="typeahead" place>
                             </div>
                         </div>
@@ -118,13 +118,13 @@
                         <br/>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Available From</legend>
+                                <h3>Available From</h3>
                                 <input type="text" value="<fmt:formatDate value="<%=new Date(nowtime) %>" pattern="yyyy-MM-dd HH:mm"/>" class="form-control form_datetime col-md-6" name="availfrom" data-date-format="yyyy-mm-dd hh:ii">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Available Until</legend>
+                                <h3>Available Until</h3>
                                 <input type="text" value="<fmt:formatDate value="<%=new Date(nowtime+86400000) %>" pattern="yyyy-MM-dd HH:mm"/>" class="form-control form_datetime col-md-6" name="availuntil" data-date-format="yyyy-mm-dd hh:ii">
                             </div>
                         </div>

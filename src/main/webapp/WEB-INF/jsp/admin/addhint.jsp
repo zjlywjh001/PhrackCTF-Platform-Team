@@ -39,7 +39,7 @@
                     <fieldset>
                         <div class="form-group">
                             <div class="col-lg-10">
-                                <legend>Challenge</legend>
+                                <h3>Challenge</h3>
                                 <select id="select01" class="form-control" style="width: 300px">
                                 	<option disabled selected>-- Select A Challenge --</option>
                             		<c:forEach items="${allchalls}" var="ch">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
-                            <legend>Hint Content</legend>
+                            <h3>Hint Content</h3>
                             <textarea class="form-control" rows="10" style="width:100%" id="hintcontent"></textarea>
                         </div>
                         <br/>

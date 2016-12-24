@@ -34,7 +34,7 @@
             <div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-                        <legend>Score: ${ teamscore }, Rank: ${ teamrank }</legend>
+                        <h3>Score: ${ teamscore }, Rank: ${ teamrank }</h3>
                         <c:forEach items="${ teamstat }" var="ctp">
                         <strong>${ ctp.name }: ${ ctp.proc }/${ ctp.total }(<fmt:formatNumber type="number" value="${ ctp.percent }" maxFractionDigits="1"/>%)</strong>
                         <div class="progress">
@@ -44,7 +44,7 @@
                         </div>
                         </c:forEach>
                         <br/>
-                        <legend>Total: ${ teamscore }/${ totalscore }(${ totalpercent }%)</legend>
+                        <h3>Total: ${ teamscore }/${ totalscore }(${ totalpercent }%)</h3>
                         <div class="progress">
                         <c:forEach items="${ teamstat }" var="ctp">
                             <div class="progress-bar progress-bar-${ctp.style} progress-bar-striped"  style="width: <fmt:formatNumber type="number" value="${ctp.percentall}" maxFractionDigits="3"/>%">
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                         </div>
-                        <legend>IP address usage&nbsp;|&nbsp;<a href="admin/teamips/${ thisteam.id }">Show All</a></legend>
+                        <h3>IP address usage&nbsp;|&nbsp;<a href="admin/teamips/${ thisteam.id }">Show All</a></h3>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="text-muted bootstrap-admin-box-title"><strong>IPs(Limited to 5 results)</strong></div>
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <legend>Submissions&nbsp;|&nbsp;<a href="admin/teamsubmit/${ thisteam.id }">Show All</a></legend>
+                        <h3>Submissions&nbsp;|&nbsp;<a href="admin/teamsubmit/${ thisteam.id }">Show All</a></h3>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="text-muted bootstrap-admin-box-title"><strong>Submissions(Limited to 5 results)</strong></div>
@@ -213,7 +213,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript: return false;">
                     <fieldset>
-                        <legend>Team Settings&nbsp;|&nbsp;<a href="teaminfo/${ thisteam.id }">View public Team Info</a></legend>
+                        <h3>Team Settings&nbsp;|&nbsp;<a href="teaminfo/${ thisteam.id }">View public Team Info</a></h3>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead">Team Name</label>
                             <div class="col-lg-10">
@@ -261,7 +261,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript: return false;">
                     <fieldset>
-                        <legend>Team token</legend>
+                        <h3>Team token</h3>
                         <div class="well">
                         	<table style="table-layout:fixed;word-break:break-all">
 						    	<thead>
@@ -284,7 +284,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript:return false;">
                     <fieldset>
-                        <legend>Delete</legend>
+                        <h3>Delete</h3>
                         <button type="submit" class="btn btn-danger" onclick="deleteteam(${ thisteam.id });">Delete</button>
                     </fieldset>
                 </form>

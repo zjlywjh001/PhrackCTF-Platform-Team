@@ -34,7 +34,7 @@
             <div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-                        <legend>Score: ${ userscore }, Rank: ${ userrank } (<a href="personalrank">View Personal Ranklist</a>)</legend>
+                        <h3>Score: ${ userscore }, Rank: ${ userrank } (<a href="personalrank">View Personal Ranklist</a>)</h3>
                         <c:forEach items="${ userstat }" var="ctp">
                         <strong>${ ctp.name }: ${ ctp.proc }/${ ctp.total }(<fmt:formatNumber type="number" value="${ ctp.percent }" maxFractionDigits="1"/>%)</strong>
                         <div class="progress">
@@ -44,7 +44,7 @@
                         </div>
                         </c:forEach>
                         <br/>
-                        <legend>Total: ${ userscore }/${ totalscore }(${ totalpercent }%)</legend>
+                        <h3>Total: ${ userscore }/${ totalscore }(${ totalpercent }%)</h3>
                         <div class="progress">
                         <c:forEach items="${ userstat }" var="ctp">
                             <div class="progress-bar progress-bar-${ctp.style} progress-bar-striped"  style="width: <fmt:formatNumber type="number" value="${ctp.percentall}" maxFractionDigits="3"/>%">
@@ -92,7 +92,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript: return false;">
                     <fieldset>
-                        <legend>Profile&nbsp;|&nbsp;<a href="profile/${ currentuser.id }">View public profile</a></legend>
+                        <h3>Profile&nbsp;|&nbsp;<a href="profile/${ currentuser.id }">View public profile</a></h3>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead">Email </label>
                             <div class="col-lg-10">
@@ -146,7 +146,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript: return false;">
                     <fieldset>
-                        <legend>Change Password</legend>
+                        <h3>Change Password</h3>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="oldpass">Old Password</label>
                             <div class="col-lg-10">

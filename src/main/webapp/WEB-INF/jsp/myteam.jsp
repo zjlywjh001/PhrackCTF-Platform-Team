@@ -205,7 +205,7 @@
             <div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-                        <legend>Score: ${ teamscore }, Rank: ${ teamrank }</legend>
+                        <h3>Score: ${ teamscore }, Rank: ${ teamrank }</h3>
                         <c:forEach items="${ teamstat }" var="ctp">
                         <strong>${ ctp.name }: ${ ctp.proc }/${ ctp.total }(<fmt:formatNumber type="number" value="${ ctp.percent }" maxFractionDigits="1"/>%)</strong>
                         <div class="progress">
@@ -215,7 +215,7 @@
                         </div>
                         </c:forEach>
                         <br/>
-                        <legend>Total: ${ teamscore }/${ totalscore }(${ totalpercent }%)</legend>
+                        <h3>Total: ${ teamscore }/${ totalscore }(${ totalpercent }%)</h3>
                         <div class="progress">
                         <c:forEach items="${ teamstat }" var="ctp">
                             <div class="progress-bar progress-bar-${ctp.style} progress-bar-striped"  style="width: <fmt:formatNumber type="number" value="${ctp.percentall}" maxFractionDigits="3"/>%">
@@ -306,7 +306,7 @@
         	<div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-                    	<legend>Token</legend>
+                    	<h3>Token</h3>
    		 				<div class="well">
                         	<table style="table-layout:fixed;word-break:break-all">
 						    	<thead>
@@ -318,11 +318,11 @@
 						    	</thead>
 							</table>
 						</div>
-    					<legend>Organization</legend>
+    					<h3>Organization</h3>
    		 				<div>
         					<p>${ thisteam.organization }</p>
    						</div>
-   	 					<legend>Team Description</legend>
+   	 					<h3>Team Description</h3>
     					<div>
         					<p>${ thisteam.description }</p>
     					</div>
@@ -336,7 +336,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript:return false;">
                     <fieldset>
-                        <legend>Quit this team</legend>
+                        <h3>Quit this team</h3>
                         <button type="submit" class="btn btn-danger" onclick="quitteam(${ thisteam.id });">Quit</button>
                     </fieldset>
                 </form>
@@ -403,7 +403,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript: return false;">
                     <fieldset>
-                        <legend>Team Settings&nbsp;|&nbsp;<a href="teaminfo/${ thisteam.id }">View public Team Info</a></legend>
+                        <h3>Team Settings&nbsp;|&nbsp;<a href="teaminfo/${ thisteam.id }">View public Team Info</a></h3>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead">Team Name</label>
                             <div class="col-lg-10">
@@ -445,7 +445,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript: return false;">
                     <fieldset>
-                        <legend>Team token</legend>
+                        <h3>Team token</h3>
                         <div class="well">
                         	<table style="table-layout:fixed;word-break:break-all">
 						    	<thead>
@@ -469,7 +469,7 @@
             <div class="span12">
                 <form class="form-horizontal" onsubmit="javascript:return false;">
                     <fieldset>
-                        <legend>Dismiss your team</legend>
+                        <h3>Dismiss your team</h3>
                         <button type="submit" class="btn btn-danger" onclick="dismissteam(${ thisteam.id });">Dismiss</button>
                     </fieldset>
                 </form>

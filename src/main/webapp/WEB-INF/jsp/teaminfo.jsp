@@ -34,7 +34,7 @@
             <div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-                        <legend>Score: ${ teamscore }, Rank: ${ teamrank }</legend>
+                        <h3>Score: ${ teamscore }, Rank: ${ teamrank }</h3>
                         <c:forEach items="${ teamstat }" var="ctp">
                         <strong>${ ctp.name }: ${ ctp.proc }/${ ctp.total }(<fmt:formatNumber type="number" value="${ ctp.percent }" maxFractionDigits="1"/>%)</strong>
                         <div class="progress">
@@ -44,7 +44,7 @@
                         </div>
                         </c:forEach>
                         <br/>
-                        <legend>Total: ${ teamscore }/${ totalscore }(${ totalpercent }%)</legend>
+                        <h3>Total: ${ teamscore }/${ totalscore }(${ totalpercent }%)</h3>
                         <div class="progress">
                         <c:forEach items="${ teamstat }" var="ctp">
                             <div class="progress-bar progress-bar-${ctp.style} progress-bar-striped"  style="width: <fmt:formatNumber type="number" value="${ctp.percentall}" maxFractionDigits="3"/>%">
@@ -121,11 +121,11 @@
         	<div class="span12">
                 <form class="form-horizontal">
                     <fieldset>
-    					<legend>Organization</legend>
+    					<h3>Organization</h3>
    		 				<div>
         					<p>${ thisteam.organization }</p>
    						</div>
-   	 					<legend>Team Description</legend>
+   	 					<h3>Team Description</h3>
     					<div>
         					<p>${ thisteam.description }</p>
     					</div>

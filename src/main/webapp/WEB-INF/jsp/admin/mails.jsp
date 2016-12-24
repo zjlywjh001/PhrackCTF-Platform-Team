@@ -55,7 +55,7 @@
                     <fieldset>
                     	<div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Recipients</legend>
+                                <h3>Recipients</h3>
                                 <input type="text" class="form-control col-md-6" id="receiver" autocomplete="off" data-provide="typeahead" value="${ target }">
                                 <a href="javascript:recvselect();"><strong>Select Receiver</strong></a><br/>
                                 <span class="text-muted" style="font-size:15px">(Separate by "," if more than one)</span>
@@ -63,13 +63,13 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>Title</legend>
+                                <h3>Title</h3>
                                 <input type="text" class="form-control col-md-6" id="mailtitle" autocomplete="off" data-provide="typeahead" placeholder="Please input title">
                             
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
-                            <legend>Content</legend>
+                            <h3>Content</h3>
                             <script id="mailcontent" name="content" type="text/plain" style="height:500px;">
 								<p></p>
                             </script>

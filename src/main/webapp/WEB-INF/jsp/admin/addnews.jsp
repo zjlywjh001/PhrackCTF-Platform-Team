@@ -57,13 +57,13 @@
                     <fieldset>
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <legend>News Title</legend>
+                                <h3>News Title</h3>
                                 <input type="text" class="form-control col-md-6" id="newstitle" autocomplete="off" data-provide="typeahead" placeholder="Please input title">
                             
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
-                            <legend>Content</legend>
+                            <h3>Content</h3>
                             <script id="newscontent" name="content" type="text/plain" style="height:500px;">
 								<p></p>
                             </script>
