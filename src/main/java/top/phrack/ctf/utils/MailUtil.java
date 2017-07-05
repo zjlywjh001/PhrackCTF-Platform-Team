@@ -33,16 +33,15 @@ public class MailUtil {
 		try {
 			MimeMessage mimeMsg = javaMailSender.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(mimeMsg, false, "utf-8");
-			helper.setText("<p><span style=\"font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;\">This mail was sent automatically. Please DO NOT reply this mail!</span>"+
-						"</p><p><br/></p><p><span style=\"font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;\">Your password Reset link is:</span>"+
-						"</p><p><a href=\""+reseturl+"\" _src=\""+reseturl+"\" style=\"font-family: 微软雅黑, &#39;Microsoft YaHei&#39;; text-decoration: underline;\">"+
-						"<span style=\"font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;\">"+reseturl+"</span></a></p><p><br/></p><p><span style=\"font-family: 微软雅黑,"+
-						" &#39;Microsoft YaHei&#39;;\">With kind regards,<br style=\"font-family: arial;  line-height: 23.8px; white-space: normal; background-color: rgb(255, 255, 255);\"/>"+
-						"------------------------------------------------------------<br style=\"font-family: arial;  line-height: 23.8px; white-space: normal; background-color: rgb(255, 255, 255)"+
-						";\"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Phrack Team</span></p>", true);
+			String content = (String) PropertyPlaceholder.getProperty("mail.template");
+			content = content.replace("{reseturl}", reseturl);
+			helper.setText(content, true);
 			helper.setTo(new String[]{target});
-			helper.setSubject("Phrack CTF Password Reset Email.");
-			helper.setFrom("ctf@phrack.top","phrackCTF");
+			String title = (String) PropertyPlaceholder.getProperty("mail.title");
+			helper.setSubject(title); 
+			String authormail = (String) PropertyPlaceholder.getProperty("mail.sendfrom");
+			String authorname = (String) PropertyPlaceholder.getProperty("mail.sendname");
+			helper.setFrom(authormail,authorname);
 			javaMailSender.send(mimeMsg);
 			log.info("Password Reset Mail has been send to "+target);
 		} catch(Exception e) {
@@ -58,7 +57,9 @@ public class MailUtil {
 			helper.setText(content, true);
 			helper.setBcc(targetuser);
 			helper.setSubject(title);
-			helper.setFrom("ctf@phrack.top","phrackCTF");
+			String authormail = (String) PropertyPlaceholder.getProperty("mail.sendfrom");
+			String authorname = (String) PropertyPlaceholder.getProperty("mail.sendname");
+			helper.setFrom(authormail,authorname);
 			javaMailSender.send(mimeMsg);
 			log.info("Mail send to "+Arrays.toString(targetuser));
 		} catch(Exception e) {

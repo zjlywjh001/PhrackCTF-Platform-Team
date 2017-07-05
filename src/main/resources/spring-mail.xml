@@ -16,6 +16,10 @@
 	<context:component-scan base-package="top.phrack.ctf.controller" />
 	<task:annotation-driven />
 	
+	<bean id="mailpropertyConfigurer" class="top.phrack.ctf.utils.PropertyPlaceholder">
+        <property name="location" value="classpath:mail.properties"/>
+    </bean>
+	
 	<!-- 邮件服务 -->
 	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<!-- 服务器 -->
