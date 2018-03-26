@@ -67,6 +67,7 @@
 
 	</servlet-mapping>
 
+	<!-- Disable Druid WebStat
 	<filter>
 		<filter-name>DruidWebStatFilter</filter-name>
 		<filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
@@ -84,17 +85,14 @@
 		<servlet-name>DruidStatView</servlet-name>
 		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
 		<init-param>
-			<!-- 允许清空统计数据 -->
 			<param-name>resetEnable</param-name>
 			<param-value>true</param-value>
 		</init-param>
 		<init-param>
-			<!-- 用户名 -->
 			<param-name>loginUsername</param-name>
 			<param-value>admin</param-value>
 		</init-param>
 		<init-param>
-			<!-- 密码 -->
 			<param-name>loginPassword</param-name>
 			<param-value>SgK1xfVxTk</param-value>
 		</init-param>
@@ -103,7 +101,7 @@
 		<servlet-name>DruidStatView</servlet-name>
 		<url-pattern>/druid/*</url-pattern>
 	</servlet-mapping>
-
+ 	-->
 
 	<!-- Shrio安全认证框架 -->
 	<filter>

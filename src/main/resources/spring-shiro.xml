@@ -37,7 +37,7 @@
     <bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
         <!-- rememberMe cookie加密的密钥 建议每个项目都不一样 默认AES算法 密钥长度（128 256 512 位）-->
         <property name="cipherKey"
-                  value="#{T(org.apache.shiro.codec.Base64).decode('cGhyYWNrY3RmREUhfiMkZA==')}"/>  <!-- Cookie加密密钥：phrackctfDE!~#$d -->
+                  value="#{T(org.apache.shiro.codec.Base64).decode('changeit')}"/>   <!-- 重要！！Cookie加密密钥 !!部署前请修改！！ -->
         <property name="cookie" ref="rememberMeCookie"/>
     </bean>
 
